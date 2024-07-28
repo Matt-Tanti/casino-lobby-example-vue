@@ -37,4 +37,5 @@ export type GamesJson = {
 
 export type ContextState = {
   defaultGames: GamesJson
+  getGameBySlug: (slug?: string) => Game | null
 }
