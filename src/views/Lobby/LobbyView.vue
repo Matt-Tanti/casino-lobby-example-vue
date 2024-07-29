@@ -6,16 +6,16 @@ import Loading from '@/views/Common/Loading.vue'
 import Logo from '@/views/Common/Logo.vue'
 import SearchBar from '@/views/Common/SearchBar.vue'
 import GameThumbnail from '@/views/Games/GameThumbnail.vue'
-import { computed, inject, ref, type ComputedRef, type Ref } from 'vue'
+import { computed, inject, ref } from 'vue'
 
 // Inject the state with the game json
 const state = inject<ContextState>('state')
 
 // Search filter
-const searchFilter: Ref<string> = ref('')
+const searchFilter = ref<string>('')
 
 // Compute the filtered games based on the search filter
-const filteredGames: ComputedRef<Game[] | null> = computed(() => {
+const filteredGames = computed<Game[] | null>(() => {
   if (!state?.defaultGames) return null
 
   const defaultGamesArray: Game[] = Object.values(state.defaultGames)

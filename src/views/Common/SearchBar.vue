@@ -1,6 +1,6 @@
 <!-- Simple input component -->
 <script setup lang="ts">
-import { defineEmits, defineProps, ref, watch, type Ref } from 'vue'
+import { defineEmits, defineProps, ref, watch } from 'vue'
 
 // Component props
 const props = defineProps<{
@@ -11,7 +11,7 @@ const props = defineProps<{
 const emit = defineEmits(['value'])
 
 // Internal value to update input text
-const searchValue: Ref<string> = ref(props.value)
+const searchValue = ref<string>(props.value)
 
 // Watch internal value and update prop on change
 watch(searchValue, (newVal) => {
