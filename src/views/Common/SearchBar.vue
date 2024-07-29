@@ -1,13 +1,27 @@
 <!-- Simple input component -->
 <script setup lang="ts">
+import { defineEmits, defineProps, ref, watch, type Ref } from 'vue'
+
+// Component props
 const props = defineProps<{
-  searchFilter: string
+  value: string
 }>()
+
+// Emit to update prop
+const emit = defineEmits(['update:searchFilter'])
+
+// Internal value to update input text
+const searchValue: Ref<string> = ref(props.value)
+
+// Watch internal value and update prop on change
+watch(searchValue, (newVal) => {
+  emit('update:searchFilter', newVal)
+})
 </script>
 
 <template>
   <div class="content">
-    <input type="text" placeholder="Search..." v-model="searchFilter" class="input" />
+    <input type="text" placeholder="Search..." v-model="searchValue" class="input" />
   </div>
 </template>
 
