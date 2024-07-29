@@ -8,14 +8,14 @@ const props = defineProps<{
 }>()
 
 // Emit to update prop
-const emit = defineEmits(['update:searchFilter'])
+const emit = defineEmits(['value'])
 
 // Internal value to update input text
 const searchValue: Ref<string> = ref(props.value)
 
 // Watch internal value and update prop on change
 watch(searchValue, (newVal) => {
-  emit('update:searchFilter', newVal)
+  emit('value', newVal)
 })
 </script>
 

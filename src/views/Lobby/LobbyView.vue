@@ -36,13 +36,18 @@ const filteredGames: ComputedRef<Game[] | null> = computed(() => {
 
   return fGames
 })
+
+// On search bar update, update searchFilter
+const handleSearchBarChange = (value: string) => {
+  searchFilter.value = value
+}
 </script>
 
 <template>
   <div class="container lobby">
     <div class="header">
       <Logo />
-      <SearchBar :value="searchFilter" />
+      <SearchBar :value="searchFilter" @value="handleSearchBarChange" />
     </div>
 
     <!-- Display loading bar if data is not fetched yet -->
