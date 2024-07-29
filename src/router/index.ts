@@ -1,6 +1,7 @@
+import UnknownView from '@/views/Common/UnknownView.vue'
+import GameOverviewView from '@/views/Games/GameOverviewView.vue'
+import LobbyView from '@/views/Lobby/LobbyView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import GameOverviewView from '../views/Games/GameOverviewView.vue'
-import LobbyView from '../views/Lobby/LobbyView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,17 @@ const router = createRouter({
       path: '/game/:gameId',
       name: 'gameOverview',
       component: GameOverviewView
+    },
+    {
+      path: '/404',
+      name: 'unknown',
+      component: UnknownView
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: {
+        name: 'unknown'
+      }
     }
   ]
 })
