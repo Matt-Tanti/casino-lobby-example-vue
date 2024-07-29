@@ -15,7 +15,7 @@ const handleClick = () => {
 </script>
 
 <template>
-  <div class="content" @click="handleClick">
+  <div class="thumbnail" @click="handleClick">
     <img class="image" :src="game.game_thumbnail" />
     <div class="titleContainer">
       <p class="title">
@@ -26,10 +26,10 @@ const handleClick = () => {
 </template>
 
 <style scoped>
-.content {
+.thumbnail {
   height: auto;
   display: flex;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   position: relative;
 }
 

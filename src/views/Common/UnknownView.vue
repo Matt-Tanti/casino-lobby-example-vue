@@ -12,7 +12,7 @@ const handleBackToLobby = (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="content">
+  <div class="unknown">
     <div>
       <h1>Error 404</h1>
       <p>Page not found!</p>
@@ -22,7 +22,7 @@ const handleBackToLobby = (event: MouseEvent) => {
 </template>
 
 <style scoped>
-.content {
+.unknown {
   height: 100%;
   display: flex;
   align-items: center;

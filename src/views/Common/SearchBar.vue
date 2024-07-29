@@ -20,13 +20,13 @@ watch(searchValue, (newVal) => {
 </script>
 
 <template>
-  <div class="content">
+  <div class="searchBar">
     <input type="text" placeholder="Search..." v-model="searchValue" class="input" />
   </div>
 </template>
 
 <style scoped>
-.content {
+.searchBar {
   display: flex;
   justify-content: center;
   align-items: center;

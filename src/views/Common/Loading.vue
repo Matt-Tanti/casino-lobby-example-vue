@@ -1,11 +1,11 @@
 <template>
-  <div class="content">
+  <div class="loading">
     <span class="spinner"></span>
   </div>
 </template>
 
 <style scoped>
-.content {
+.loading {
   height: 100%;
   display: flex;
   align-items: center;
