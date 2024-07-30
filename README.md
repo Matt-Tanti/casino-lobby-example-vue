@@ -1,39 +1,60 @@
-# casino-lobby-example-vue
+# Casino Lobby Example (Vue.js 3)
 
-This template should help get you started developing with Vue 3 in Vite.
+## Overview
 
-## Recommended IDE Setup
+`casino-lobby-example-vue` is a simple casino lobby web application built using Vue.js 3, TypeScript, Vite, and Vue Router. The project features a search bar with fuzzy search capabilities and allows users to navigate to a game overview by clicking on a game. The site is designed to be responsive to different common viewports.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+The site was designed in dark mode due to high sensitivity to light following an eye doctor appointment during the development process.
 
-## Type Support for `.vue` Imports in TS
+## Features
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Search Bar**: Implements fuzzy search to find games.
+- **Game Navigation**: Clicking on a game navigates the user to a detailed overview with the game's title and description.
+- **Responsive Design**: The site adapts to different common viewports for an optimal user experience on various devices.
 
-## Customize configuration
+## Installation
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1. **Clone the repository**:
 
-## Project Setup
+   ```sh
+   git clone https://github.com/Matt-Tanti/casino-lobby-example-vue.git
+   cd casino-lobby-example-vue
+   ```
 
-```sh
-yarn
-```
+2. **Install dependencies**:
+   ```sh
+   yarn
+   ```
 
-### Compile and Hot-Reload for Development
+## Scripts
 
-```sh
-yarn dev
-```
+- **Development Server**: Start the development server with hot reloading.
+  ```sh
+  yarn dev
+  ```
+- **Build**: Compile the TypeScript files and build the project for production.
+  ```sh
+  yarn build
+  ```
+- **Linting**: Run ESLint to check for code quality and enforce coding standards.
+  ```sh
+  yarn lint
+  ```
+- **Preview**: Preview the production build locally.
+  ```sh
+  yarn preview
+  ```
 
-### Type-Check, Compile and Minify for Production
+## Screenshots
 
-```sh
-yarn build
-```
+### Lobby
 
-### Lint with [ESLint](https://eslint.org/)
+![Lobby Page](./screenshots/lobby-page.png)
 
-```sh
-yarn lint
-```
+### Lobby Filtered
+
+![Lobby Page Filtered](./screenshots/lobby-page-filtered.png)
+
+### Game Overview
+
+![Game Overview Page](./screenshots/game-overview-page.png)
