@@ -1,6 +1,6 @@
 <!-- Simple input component -->
 <script setup lang="ts">
-import { defineEmits, defineProps, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 
 // Component props
 const props = defineProps<{
