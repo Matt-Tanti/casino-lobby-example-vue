@@ -1,22 +1,12 @@
 <!-- Simple 404 page -->
-<script setup lang="ts">
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-// Handle back to lobby button click
-// Navigate back to lobby
-const handleBackToLobby = (event: MouseEvent) => {
-  router.replace('/')
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="unknown">
     <div>
       <h1>Error 404</h1>
       <p>Page not found!</p>
-      <button @click="handleBackToLobby">Back to lobby</button>
+      <RouterLink to="/" tag="button"><button>Back to lobby</button></RouterLink>
     </div>
   </div>
 </template>

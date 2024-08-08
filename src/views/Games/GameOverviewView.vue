@@ -30,12 +30,6 @@ watch(
   },
   { immediate: true }
 )
-
-// Handle back button click
-// Navigate back to lobby
-const handleBackClick = () => {
-  router.push('/')
-}
 </script>
 
 <template>
@@ -46,10 +40,10 @@ const handleBackClick = () => {
     <div class="contentBackground container">
       <div class="content">
         <!-- Backbutton -->
-        <button class="backButton" @click="handleBackClick">
+        <RouterLink class="backButton" to="/">
           <i class="arrowLeft" />
           <p>back</p>
-        </button>
+        </RouterLink>
 
         <!-- Title  -->
         <div class="title">
@@ -109,6 +103,7 @@ const handleBackClick = () => {
   padding: 1rem;
   background: none;
   border: none;
+  color: white;
 }
 
 .arrowLeft {
